@@ -28,7 +28,8 @@ The environmental figures will need to be "automated".
   + Input: daily BEUTI_daily.nc(2.2M) (external website)
   + Output: monthly BEUTI_monthly.nc (72k)
   + create_daily_monthly_timeseries.py
-  + *Note* org babel tangle source code file found at:\\ [[/Users/isaacschroeder/Work/mini_esr/2025/create_daily_monthly_timeseries.py]]\\
+  + *Note* org babel tangle source code file found at:\\
+    [[/Users/isaacschroeder/Work/mini_esr/2025/create_daily_monthly_timeseries.py]]\\
     https://github.com/idsch/Work-mini_esr/blob/main/2025/create_daily_monthly_timeseries.py
 #+STARTUP: nofold
 #+STARTUP: hideblocks
@@ -186,10 +187,12 @@ ds2_out.to_netcdf(fn2_nc)
    + <2025-07-11 Fri>
    + Use the netcdf created using [[code1][Code1]].
    + Calculate anoms and create the time x lat plot.
-   + Input: BEUTI_monthl.nc (72k) ([[code1][Code1]]).
-   + Output:
+   + Input: BEUTI_monthl.nc (72k) ([[code1][Code1]])
+   + Output: contour_beuti_anom_lat_31_47.png (486k)
    + contour_beuti_anom_time_lat.py
-   + \textbf{Note} org babel tangle source code file found at: \newline [[/Users/isaacschroeder/Work/mini_esr/2025/contour_beuti_anom_time_lat.py]] \newline https://gitlab.com/idsch/Work-mini_esr/blob/master/2025//contour_beuti_anom_time_lat.py
+   + *Note* org babel tangle source code file found at:\\
+     [[/Users/isaacschroeder/Work/mini_esr/2025/contour_beuti_anom_time_lat.py]]\\
+     https://github.com/idsch/Work-mini_esr/blob/main/2025/contour_beuti_anom_time_lat.py
 #+STARTUP: nofold
 #+STARTUP: hideblocks
 #+NAME: contour_beuti_anom_time_lat
@@ -467,14 +470,13 @@ plt.savefig(fn_fig)
 
 * Results
 
-* Conclusion
-
++ Fig [[fg1]], BEUTI anoms for the last-five years over 31-48N.
 * References 
 #+PRINT_BIBLIOGRAPHY:
 
 #+latex: \clearpage
 * Figures
-
-#+caption: 
+#+NAME: fg1
+#+caption:
 #+caption: Figure created with contour_beuti_anom_time_lat.py code.
 [[file:contour_beuti_anom_lat_31_47.png]]
