@@ -18,11 +18,18 @@ The environmental figures will need to be "automated".
 * Code BEUTI time x lat anoms
 + <2025-07-10 Thu>
 + Show monthly BEUTI anomalies over the lat five years, over latitudes 30-47N.
++ This plot uses data download from https://mjacox.com/upwelling-indices/
+
+
 1. [@1] Code1, create data netcdf
   + <2025-07-10 Thu>
   + Download Mike J's daily BEUTI netcdf for the most current data and create monthly and cumulative dataarrays.
+  + Steps involved before running this code, download the daily BEUTI_daily.nc(2.2M); I download the data by visiting the website.
+  + Input: daily BEUTI_daily.nc(2.2M)
+  + Output: monthly BEUTI_monthly.nc (72k)
   + create_daily_monthly_timeseries.py
-  + \textbf{Note} org babel tangle source code file found at: \newline [[/Users/isaacschroeder/Work/mini_esr/2025/create_daily_monthly_timeseries.py]] \newline https://github.com/idsch/Work-mini_esr/blob/main/2025/create_daily_monthly_timeseries.py
+  + **Note** org babel tangle source code file found at:\ [[/Users/isaacschroeder/Work/mini_esr/2025/create_daily_monthly_timeseries.py]]
+    https://github.com/idsch/Work-mini_esr/blob/main/2025/create_daily_monthly_timeseries.py
 #+STARTUP: nofold
 #+STARTUP: hideblocks
 #+NAME: create_daily_monthly_timeseries
@@ -174,7 +181,7 @@ ds2_out.to_netcdf(fn2_nc)
 # ds3_out.to_netcdf(fn3_nc)
 
 #+END_SRC
-#+caption: Figure created with create_daily_monthly_timeseries.py code.
+
 
 
 
