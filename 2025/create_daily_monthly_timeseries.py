@@ -1,32 +1,3 @@
-#+latex_header: \usepackage{natbib}
-#+options: toc:nil
-#+OPTIONS: num:nil
-#+OPTIONS: ^:nil
-#+latex_header: \hypersetup{colorlinks=true,linkcolor=blue}
-#+LATEX_HEADER: \usepackage{enumitem}
-#+TITLE: Create Environmental Figures for Mini-ESR
-#+AUTHOR: Isaac D. Schroeder
-#+ATTR_LATEX: :options [noitemsep]
-#+bibliography: /home/isaac/Documents/org_ref/references.bib
-
-
-* Background
-Compile code for creating figures for a mini-ESR.
-The mini-ESR is expected to be produced before the ESR and will have current conditions.
-The environmental figures will need to be "automated".
-
-* Code BEUTI time x lat anoms
-+ <2025-07-10 Thu>
-+ Show monthly BEUTI anomalies over the lat five years, over latitudes 30-47N.
-1. [@1] Code1, create data netcdf
-  + <2025-07-10 Thu>
-  + Download Mike J's daily BEUTI netcdf for the most current data and create monthly and cumulative dataarrays.
-  + create_daily_monthly_timeseries.py
-  + \textbf{Note} org babel tangle source code file found at: \newline [[/Users/isaacschroeder/Work/mini_esr/2025/create_daily_monthly_timeseries.py]] \newline https://github.com/idsch/Work-mini_esr/blob/main/2025/create_daily_monthly_timeseries.py
-#+STARTUP: nofold
-#+STARTUP: hideblocks
-#+NAME: create_daily_monthly_timeseries
-#+BEGIN_SRC python :eval never :results none :exports none :async t :tangle create_daily_monthly_timeseries.py :session Python
 import os
 import numpy as np
 import xarray as xr
@@ -172,18 +143,3 @@ ds2_out.to_netcdf(fn2_nc)
 
 # fn3_nc = '{}/BEUTI_cui_mtrx.nc'.format(dir_out)
 # ds3_out.to_netcdf(fn3_nc)
-
-#+END_SRC
-#+caption: Figure created with create_daily_monthly_timeseries.py code.
-
-
-
-* Results
-
-* Conclusion
-
-* References 
-#+PRINT_BIBLIOGRAPHY:
-
-#+latex: \clearpage
-* Figures
